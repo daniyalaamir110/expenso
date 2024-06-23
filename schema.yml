@@ -1,0 +1,7 @@
+openapi: 3.0.3
+info:
+  title: Expenso API
+  version: 1.0.0
+  description: This is the API description for Expenso, an expense tracker app.
+paths: {}
+components: {}
