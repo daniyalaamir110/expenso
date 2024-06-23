@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     "core.apps.CoreConfig",
     "account.apps.AccountConfig",
     "authentication.apps.AuthenticationConfig",
+    "expense.apps.ExpenseConfig",
 ]
 
 REST_FRAMEWORK = {
@@ -102,8 +103,12 @@ WSGI_APPLICATION = "expenso.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "expenso",
+        "USER": "expenso",
+        "PASSWORD": "expenso",
+        "HOST": "db",
+        "PORT": 5432,
     }
 }
 
@@ -177,3 +182,5 @@ EMAIL_USE_TLS = True
 BASE_FRONTEND_URL = config("BASE_FRONTEND_URL", "http://localhost:3000")
 GOOGLE_OAUTH2_CLIENT_ID = config("GOOGLE_OAUTH2_CLIENT_ID")
 GOOGLE_OAUTH2_CLIENT_SECRET = config("GOOGLE_OAUTH2_CLIENT_SECRET")
+
+CELERY_BROKER_URL = "rabbit-mq"

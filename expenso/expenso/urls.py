@@ -28,6 +28,7 @@ urlpatterns = [
     path("core/", include("core.urls")),
     path("account/", include("account.urls")),
     path("auth/", include("authentication.urls")),
+    path("expense/", include("expense.urls")),
 ]
 
 # API docs

@@ -29,6 +29,7 @@ packaging==24.1
 pillow==10.3.0
 progressbar2==4.4.2
 prompt_toolkit==3.0.47
+psycopg2-binary==2.9.9
 PyJWT==2.8.0
 python-dateutil==2.9.0.post0
 python-decouple==3.8
