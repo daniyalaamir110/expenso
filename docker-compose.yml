@@ -9,7 +9,7 @@ services:
       - "8000:8000"
     volumes:
       - .:/app
-    image: app.expenso:django
+    image: daniyalaamir110/app.expenso:django
     container_name: app.expenso
     command: python expenso/manage.py runserver 0.0.0.0:8000
     depends_on:
@@ -38,7 +38,7 @@ services:
     build: .
     volumes:
       - ./expenso:/app/expenso
-    image: celery.expenso:celery
+    image: daniyalaamir110/celery.expenso:celery
     container_name: celery.expenso
     command: sh -c "cd expenso && celery -A expenso.celery_app worker --loglevel=DEBUG --pool=solo"
     depends_on:
